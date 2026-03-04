@@ -1,0 +1,23 @@
+# Ranking configuration for the Middle America Job Agent
+
+# Scoring weights — must sum to 1.0
+weights:
+  skill_match: 0.5   # 50% — Jaccard similarity between job skills and user profile
+  location: 0.3      # 30% — location preference tier
+  recency: 0.2       # 20% — exponential decay based on posting age
+
+# Location scores (0-100) per tier
+location_scores:
+  remote: 100        # fully remote — highest flexibility
+  hybrid: 90         # hybrid — near-remote
+  preferred_state: 80  # in preferred_states list (Tier 1)
+  middle_america: 60   # broader Middle America (Tier 2)
+  other: 20          # outside preferred regions
+
+# Recency decay
+recency_decay_days: 30  # jobs older than this score close to 0
+# Formula: score = 100 * exp(-days_old / decay_days)
+
+# Output limits
+top_n: 10         # number of ranked jobs to return
+top_n_tailor: 3   # number of top jobs to pass to tailoring stage

@@ -1,0 +1,37 @@
+# Location preferences for the Middle America Job Agent
+
+# Tier 1: Preferred states — score 80 in ranking
+preferred_states:
+  - IA   # Iowa
+  - NE   # Nebraska
+  - MO   # Missouri
+  - KS   # Kansas
+  - MN   # Minnesota
+  - WI   # Wisconsin
+  - IL   # Illinois
+  - IN   # Indiana
+  - OH   # Ohio
+  - MI   # Michigan
+
+# Tier 2: Broader Middle America — score 60 in ranking
+middle_america_states:
+  - IA
+  - NE
+  - MO
+  - KS
+  - MN
+  - WI
+  - IL
+  - IN
+  - OH
+  - MI
+  - ND   # North Dakota
+  - SD   # South Dakota
+  - OK   # Oklahoma
+  - AR   # Arkansas
+  - TN   # Tennessee
+  - KY   # Kentucky
+
+# Remote and hybrid acceptability
+remote_acceptable: true
+hybrid_acceptable: true

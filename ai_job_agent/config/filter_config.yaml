@@ -1,0 +1,46 @@
+# Filter configuration for the Middle America Job Agent
+# Controls which jobs are excluded from the pipeline
+
+# FAANG+ and big-tech companies to exclude (case-insensitive substring match)
+blacklist_companies:
+  - google
+  - apple
+  - meta
+  - amazon
+  - microsoft
+  - netflix
+  - uber
+  - airbnb
+  - tesla
+  - openai
+  - ibm
+  - oracle
+  - salesforce
+  - twitter
+  - x corp
+  - tiktok
+  - bytedance
+  - nvidia
+  - intel
+  - adobe
+
+# Keywords in job description that signal a startup (triggers exclusion)
+startup_keywords:
+  - "series a"
+  - "series b"
+  - "seed stage"
+  - "early stage"
+  - "pre-seed"
+  - "seed funded"
+  - "we are a startup"
+
+# Company size thresholds (used when size data is available)
+company_size:
+  min_employees: 50    # exclude startups below this
+  max_employees: 5000  # exclude mega-corps above this
+
+# Runtime toggles — override via CLI flag (--toggle iowa_only)
+# Default values here; CLI flags take precedence at runtime
+toggles:
+  iowa_only: false
+  remote_only: false
